@@ -1,0 +1,152 @@
+.auth-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+
+.auth-left {
+  background: linear-gradient(135deg, #2EC4B6, #F59E0B); /* 🔥 градієнт */
+  color: white;
+  padding: 60px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;      /* 🔥 ДОДАЙ ЦЕ */
+  text-align: center;       /* 🔥 І ЦЕ */
+  position: relative;
+}
+
+.auth-brand {
+  display: flex;
+  flex-direction: column;   /* 🔥 ставить елементи вертикально */
+  align-items: center;      /* 🔥 центрує по горизонталі */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.auth-brand-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.auth-brand-icon img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px; /* відступ до тексту */
+}
+
+.auth-brand h1 {
+  font-family: 'Fraunces', serif;
+  font-size: 28px;
+  color: white;
+}
+
+.auth-left h2 {
+  font-family: 'Fraunces', serif;
+  font-size: 40px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.auth-left p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.92); /* світліший, але читабельний */
+  margin: 0 auto 40px;            /* центрує текст */
+}
+
+.auth-left::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35); /* 🔥 затемнення */
+  z-index: 0;
+}
+
+.auth-left > * {
+  position: relative;
+  z-index: 1;
+}
+
+.auth-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;  /* центрує елементи */
+  margin: 0 auto;           /* 🔥 центрує сам блок */
+}
+
+.auth-feature {
+  padding: 8px 16px;
+  background: rgba(61,187,171,0.15);
+  border: 1px solid rgba(61,187,171,0.25);
+  border-radius: 50px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.8);
+}
+
+.auth-right {
+  background: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+}
+
+.auth-tabs {
+  display: flex;
+  gap: 0;
+  background: var(--sand);
+  border-radius: 12px;
+  padding: 4px;
+  margin-bottom: 28px;
+}
+
+.auth-tab {
+  flex: 1;
+  padding: 10px;
+  background: none;
+  border: none;
+  border-radius: 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--warm-grey);
+  transition: all 0.2s;
+}
+
+.auth-tab.active {
+  background: white;
+  color: var(--charcoal);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-weight: 600;
+}
+
+.auth-title {
+  font-family: 'Fraunces', serif;
+  font-size: 26px;
+  margin-bottom: 24px;
+}
+
+.auth-hint {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13px;
+  color: var(--warm-grey);
+}
+
+@media (max-width: 768px) {
+  .auth-page { grid-template-columns: 1fr; }
+  .auth-left { display: none; }
+}
